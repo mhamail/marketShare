@@ -1,0 +1,32 @@
+
+    .image {
+        width: 150px;
+        position: relative;
+        margin-right: 10px;
+
+        .cross {
+            position: absolute;
+            top: 0;
+            z-index: 2;
+            right: 0;
+            display: block;
+            font-size: 30px;
+            color: black;
+            cursor: pointer;
+
+        }
+
+    }
+
+    .cross:hover {
+        opacity: 0.6 !important;
+        color: red !important;
+    }
+
+    .image:hover {
+        opacity: 0.7;
+
+        .cross {
+            background-color: #fff;
+        }
+    }

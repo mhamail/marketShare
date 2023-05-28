@@ -1,0 +1,22 @@
+.banner-project {
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    animation: opacity 0.5s ease-out .75s;
+
+    & .imageSkew {
+        clip-path: polygon(0 0, 100% 0%, 80% 100%, 0 100%);
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .heading {
+        font-size: 1.2em;
+    }
+
+    .show {
+        a {
+            font-size: 0.9em;
+        }
+    }
+}

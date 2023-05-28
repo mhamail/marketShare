@@ -1,0 +1,164 @@
+.d-card {
+    // FUNCTIONALITY
+    perspective: 1500px;
+    -moz-perspective: 1500px;
+    position: relative;
+    margin-bottom: 10px;
+    height: 490px;
+
+    &_side {
+        height: 100%;
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        overflow: hidden;
+        // box-shadow: 0 15px 40px rgba($c-black, .15);
+
+        &-back {
+            transform: rotateY(180deg);
+            // background-image: linear-gradient(to right bottom,
+            //         rgba($c-black, 0.8),
+            //         rgba($c-grey, 0.8));
+        }
+    }
+
+    &:hover &_side-front {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &_side-back {
+        transform: rotateY(0);
+    }
+
+    &_pic {
+        text-align: center;
+        background-size: cover;
+        background-position: center;
+        height: 24vw;
+        width:24vw;
+        background-blend-mode: screen;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        // background-image: linear-gradient(to right bottom, $c-secondary-light, $c-secondary-dark),
+        //     url(../../public/img/nat-5.jpg);
+    }
+
+    &_heading {
+        font-size: 28px;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: right;
+        color: $c-white;
+        position: absolute;
+        top: 120px;
+        right: 20px;
+        width: 75%;
+    }
+
+    &_heading-span {
+        padding: 5px 15px;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        background-image: linear-gradient(to right bottom,
+                rgba($c-black, 0.3),
+                rgba($c-grey, 0.3));
+    }
+
+    &_details {
+        text-align: center;
+        ul {
+            list-style: none;
+            width: 90%;
+            height: fit-content;
+            position: relative;
+
+            li {
+                height: 30px;
+                overflow: hidden;
+                margin-left: -10px;
+                display: block;
+                // text-align: center;
+                font-size: 15px;
+                padding: 10px;
+
+                &:not(:last-child) {
+                padding-top: 5px;
+                    border-bottom: 1px solid $c-grey-dark-2;
+                }
+            }
+        }
+
+    }
+
+    &_back-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+    }
+
+    &_price-box {
+        text-align: center;
+        margin-bottom: 0px;
+    }
+
+    &_price-only {
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+
+    &_price-value {
+        font-size: 40px;
+        font-weight: 100;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .d-card {
+        height: 670px;  
+        &_pic {
+            width: 50vw;
+            height: 50vw;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .d-card {
+        height: 400px;
+        &_pic {
+            width: 50vw;
+            height: 50vw;
+        }
+        &_heading{
+            font-size: 16px;
+            right: 0;
+            top: 60px;
+        }
+        &_details{
+            ul{
+                li{
+                    height: 20px;
+                    font-size: 0.7em;
+                    padding:5px 0 30px 0;
+                }
+            }
+        }
+        &_price-value{
+            font-size: 20px;
+        }
+    
+    }
+    
+}
+
+@media screen and (max-width: 420px) {
+    .d-card {
+        height: 390px; 
+    }
+}

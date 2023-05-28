@@ -1,0 +1,22 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+@import "abstracts/variables";
+@import "abstracts/@mixin";
+
+@import "base/animations.scss";
+@import "base/base.scss";
+@import "base/typography.scss";
+// @import "base/utilities.scss";
+
+@import "components/banner";
+@import "components/category";
+@import "components/dual-card";
+@import "components/button";
+@import "components/composition";
+@import "components/simple-card";
+@import "components/allUserCard";
+
+@import "pages/home";

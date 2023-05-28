@@ -1,0 +1,24 @@
+.simple-card{
+    font-size: 15px;
+    padding: 25px;
+    text-align: center;
+    border-radius: 3px;
+    transition: transform .3s;
+    &_icon {
+        font-size: 60px;
+        margin-bottom: 5px;
+        display: inline-block;
+        // background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    &:hover {
+        transform: translateY(-1.5rem) scale(1.03);
+    }
+}
+@media screen and (max-width: 420px) {
+    .simple-card{
+        font-size: 10px;
+        padding: 15px; 
+    }
+}

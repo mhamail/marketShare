@@ -1,0 +1,5 @@
+@mixin animation($name, $sec) {
+    animation-name: $name;
+    animation-duration: $sec;
+    animation-timing-function: ease-out;
+}
